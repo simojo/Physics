@@ -6,8 +6,8 @@ a (slit separation)
 deltaY (distance along image from optical axis)
 s (distance along optical axis from slits to image)
 
-x = n/a
-y = deltaY/s or sin(theta)
+domain = n/a
+range = deltaY/s or sin(theta)
 """
 
 # trendline http://stackoverflow.com/questions/26447191/ddg#26447505
@@ -41,7 +41,7 @@ z = np.polyfit(x, y, 1)
 p = np.poly1d(z)
 plt.plot(x,p(x))
 plt.xlabel("n/a")
-plt.ylabel("sin(theta)")
+plt.ylabel("Δy/s")
 
 # plt.title(f"Double Slit (wavelength = {wavelength})") # FIXME
 plt.grid(True)
